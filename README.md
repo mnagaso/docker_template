@@ -1,4 +1,4 @@
-![Logo](./Logo_mm.png)
+![Logo](./logo.png)
 
 # docker_template
 Template for packaging your research environment with Docker.  
