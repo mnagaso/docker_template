@@ -5,23 +5,14 @@ Template for packaging your research environment with Docker.
 
 0. if Docker is not installed yet on your computer, it can be downloaded from https://www.docker.com/  (free sign up is required.)  
 1. if git command is not installed yet, its installer is available here https://git-scm.com/downloads  
-1. download this repository or git clone by `git clone https://github.com/mnagaso/docker_template` on your terminal or powershell.  
+1. download this repository or git clone by `git clone --branch jupyer_env https://github.com/mnagaso/docker_template` on your terminal or powershell.  
 2. go into the directory `cd ~/where/this/directory/docker_template`  
 3. verify if docker daemon is running.  
-4. `docker-compose up -d` to build the docker container.  
-5. `docker-compose ps` shows the name and states of the docker container which is built in the former step like:  
-```
-              Name                   Command    State   Ports
--------------------------------------------------------------
-docker_template_yourcontainername_1   /bin/bash   Up
-```
-6. Connect to the docker environment with `docker attach (container name)`. Generally it is `docker attach docker_template_yourcontaintername_1` or `docker attach docker_template_yourcontainername_1`.   
-  Only the files put in /workspace will be shared with the host environment.  
-  When you erase the docker container, only the files in this /workspace will be kept and others will be lost.  
-7. to leave this container, `ctrl + p + q`  
-8. for re-attaching to this container, redo step 6.  
-9. to stop the container,  `docker-compose down`.  
+4. `docker-compose up` to build the docker container.  
+5. accessing 127.0.0.1:8888 on your web browser will show jupyterlab interface.  
+6. to stop the container,  Ctrl+d twice in the terminal.  
 
 The modifications done in the container will be reflected automatically on the local environment.  
+For installing additional python module, add its name in `./jupyterlab/requirements.txt`.  
 
 This script does not support docker toolbox (docker system working with virtual box).

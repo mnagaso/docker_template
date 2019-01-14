@@ -1,5 +1,1 @@
-cython
-numpy
 scipy
-pandas
-matplotlib
