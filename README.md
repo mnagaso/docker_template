@@ -15,11 +15,12 @@ Template for packaging your research environment with Docker.
 -------------------------------------------------------------
 docker_template_yourcontainername_1   /bin/bash   Up
 ```
-5. Connect to the docker environment with `docker attach (container name)`. Generally it is `docker attach docker_template_yourcontaintername_1` or `docker attach docker_template_yourcontainername_1`.   
+6. Connect to the docker environment with `docker attach (container name)`. Generally it is `docker attach docker_template_yourcontaintername_1` or `docker attach docker_template_yourcontainername_1`.   
   Only the files put in /workspace will be shared with the host environment.  
   When you erase the docker container, only the files in this /workspace will be kept and others will be lost.  
-6. to leave this container, `ctrl + p + q`  
-7. for re-attaching to this container, redo step 4.
+7. to leave this container, `ctrl + p + q`  
+8. for re-attaching to this container, redo step 6.  
+9. to stop the container,  `docker-compose down`.  
 
 The modifications done in the container will be reflected automatically on the local environment.  
 
